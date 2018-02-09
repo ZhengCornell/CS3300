@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>INFO 3300 - Data-driven Web Applications</title>
+<link href="https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<style>
+body { font-family: 'Alegreya Sans', Calibri, sans-serif; }
+svg { border: solid #ccc 1px; }
+</style>
+</head>
+<body>
+<h3>Prompt for Monday, February 5</h3>
+
+<div>
+<ul>
+	<li>Have a local web server running.</li>
+	<li>We are now using <a href="https://d3js.org/">Mike Bostock's d3 library</a>. Read <a href="https://github.com/d3/d3/blob/master/API.md">the documentation</a> to gain superpowers.</li>
+</ul>
+</div>
+
+<div>
+</div>
+
+<!-- Here's an SVG element. Note that in this file it looks like the <div> above. -->
+<svg height="400" width="200">
+  <!-- Visual elements are represented by tags, which have attributes -->
+
+
+</svg>
+
+<script id="notes">
+//处理数据生成图
+//domain is input, range is output
+//Linear scales are a good default choice for continuous quantitative data because they preserve proportional differences. Each range value y can be expressed as a function of the domain value x: y = mx + b.
+//Power Scale: Each range value y can be expressed as a function of the domain value x: y = mx^k + b, where k is the exponent value. Power scales also support negative domain values, in which case the input value and the resulting output value are multiplied by -1
+var superbowl = [
+{"Team":"PHL","Plays":14,"Yards":67,"Result":"FG"},
+{"Team":"NE","Plays":9,"Yards":67,"Result":"FG"},
+{"Team":"PHL","Plays":3,"Yards":77,"Result":"TD"},
+{"Team":"NE","Plays":8,"Yards":74,"Result":"missed"},
+{"Team":"PHL","Plays":3,"Yards":2,"Result":"punt"},
+{"Team":"NE","Plays":5,"Yards":28,"Result":"downs"},
+{"Team":"PHL","Plays": 6,"Yards":65,"Result":"TD"},
+{"Team":"NE","Plays":5,"Yards":48,"Result":"FG"},
+{"Team":"PHL","Plays":4,"Yards":32,"Result":"int"},
+{"Team":"NE","Plays":7,"Yards":90,"Result":"TD"},
+{"Team":"PHL","Plays":7,"Yards":70,"Result":"TD"},
+{"Team":"NE","Plays":5,"Yards":48,"Result":"end"},
+
+{"Team":"NE","Plays":8,"Yards":75,"Result":"TD"},
+{"Team":"PHL","Plays":11,"Yards":85,"Result":"TD"},
+{"Team":"NE","Plays":7,"Yards":75,"Result":"TD"},
+{"Team":"PHL","Plays":8,"Yards":51,"Result":"FG"},
+{"Team":"NE","Plays":10,"Yards":75,"Result":"TD"},
+{"Team":"PHL","Plays":14,"Yards":705,"Result":"TD"},
+{"Team":"NE","Plays":2,"Yards":3,"Result":"fumble"},
+{"Tema":"PHL","Plays":4,"Yards":4,"Result":"FG"},
+{"Team":"NE","Plays":9,"Yards":40,"Result":"end"}
+];
+
+var svg = d3.select("svg");
+
+
+// 线的长度和Yards有关 Y+100
+var yardsScale = d3.scaleLinear()
+.domain([0,100]).range([100, 200]);
+
+//每行一断线
+var driveScale = d3.scaleLinear()
+.domain([0, superbowl.length - 1]).range([20, 380]);
+
+// 这个操作就是map 上色
+var teamScale = d3.scaleOrdinal()
+.domain(["NE", "PHL"]).range([["#CC122C"],["#004851"]]);
+
+//做 y 轴
+var yScale = d3.scaleLinear()
+.domain([-100, 100])
+.range([0, 200]);
+
+var xScale = d3.scaleLinear()
+.domain(["NE", "PHL"])
+.range([50, 350]);
+
+var yAxis = d3.axisBottom(yScale);
+var xAxis = d3.axisRight(xScale).tickFormat(function(d){ return d.x;});
+
+// svg.axis()
+// .scale(yScale)
+// .orient("bottom");
+// From https://teamcolorcodes.com
+// Patriots Red: #CC122C
+// Eagles Midnight Green: #004851
+
+// index the order of 
+superbowl.forEach(function(data, index){
+	svg.append("line")
+	.attr("x1", yardsScale(0))
+	.attr("x2", data.Team == "NE" ? 200 + (-1)* yardsScale(data.Yards) : yardsScale(data.Yards))
+	.attr("y1", driveScale(index))
+	.attr("y2", driveScale(index))
+	.style("stroke", teamScale(data.Team))
+	.style("stroke-width", 10);
+});
+svg.append("g")
+.attr("class", "y axis")
+.call(yAxis);
+svg.append("g")
+.attr("class", "x axis")
+.attr("transform", "translate(0,0)")
+.call(xAxis);
+
+</script>
+
+<!-- This block will be automatically filled with syntax-highlighted code from the script below -->
+<pre><code id="display">
+</code></pre>
+
+
+<script>
+document.getElementById("display").innerText = document.getElementById("notes").innerText;
+hljs.initHighlightingOnLoad();
+</script>
+
+
+</body>
+</html>

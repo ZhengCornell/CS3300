@@ -1,0 +1,47 @@
+<p id="p1">Problem 1: boolean function number object string undefined 
+<script>
+console.log(typeof (true));
+// expected output: Boolean
+console.log(typeof (120));
+// expected output: Number
+console.log(typeof ("hello"));
+// expected output: String
+console.log(typeof ([1,2,3,4,5]));
+// expected output: Object
+function myFunction(a,b){
+	return a + b;
+}
+console.log(typeof (myFunction));
+// expected output: Function
+console.log(typeof (ifhowefhowhfwofihwiofh));
+// expected output: Undefined
+</script>
+</p>
+<p id="p2">Problem 2: For a, the NAME should have double quotation marks "". At outside, the whole expression should have single quotation marks ''.
+For b, at outside, the whole expression should have single quotation marks ''. And it should get rid of the expression in slash.
+For c, at outside, the whole expression should have single quotaton marks ''. And it should have one right square bracket. And between each barce should be a comma.
+Besides, the semicolon behind number should be changed to colon.
+<script>
+var a = '{ "name": "Data-driven web applications" }';
+var b = '{"number": 3300 }';
+var c = '[ { "name": "DDWA", "number": 3300 }, { "name": "Java", "number": 2110 }, { "name": "Python", "number": 1110 } ]';
+obja = JSON.parse(a);
+objb = JSON.parse(b);
+objc = JSON.parse(c);
+console.log(obja.name);
+console.log(objb.number);
+console.log(objc[1].name);
+</script>	
+</p>
+<p id="p3">Problem 3: var ans = '[{"age": 30, "result": true, "names":["Lily", "Jeff", "John" ]}, {"age": 32, "result": false, "names":["Amy", "Johnson", "Ben" ]}, {"age": 25, "result": true, "names":["Cindy", "Jack", "Nick" ]}]';
+type of age is number, type of result is boolean, type of names is object--a list of strings.
+<script>
+var ans = '[{"age": 30, "result": true, "names":["Lily", "Jeff", "John" ]}, {"age": 32, "result": false, "names":["Amy", "Johnson", "Ben" ]}, {"age": 25, "result": true, "names":["Cindy", "Jack", "Nick" ]}]';
+obj = JSON.parse(ans);
+console.log(obj[1].age);
+console.log(obj[2].result);
+console.log(obj[3].names);
+</script>
+</p>
+<p id="p4">Problem 4: The course policy requires us to submit correct work before the deadline otherwise receive a zero. There are two projects for undergraduates and one take home final in this semester.
+</p>

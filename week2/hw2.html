@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homework 1 Due 11:59pm Monday 2/5</title>
+	<style type="text/css">
+		td{
+			text-align: center;
+		}
+		#A{
+			background-color: green;
+		}
+		#B{
+			background-color: blue;
+		}
+		#C{
+			background-color: yellow;
+		}
+		#D{
+			background-color: orange;
+		}
+	</style>
+</head>
+<body>
+<p>Problem 1: Display_p1 is <span id="p1"></span>
+<script>
+// Problem 1: Display_p1 is 
+	function roll(){
+	return Math.floor(Math.random() * 6 + 1);
+}
+var x = 0;
+var display_p1 = [];
+while(x < 10){
+	display_p1[x] = roll();
+	x++;
+}
+document.getElementById("p1").innerText = display_p1.join('-');
+</script>
+</p>
+<p>Problem 2: Display_p2 is <span id="p2"></span>
+</p>
+<script>
+	function diceFactory(values){
+	return function(){
+		var coefficient = Math.floor(Math.random() * values.length);
+		return values[coefficient];
+	}
+}
+function lunch(){
+	var f = diceFactory(["pizza","burrito","sushi"]);
+	// console.log(f());
+	return f();
+}
+var display_p2 = [];
+var y = 0;
+while(y < 10){
+	display_p2[y] = lunch();
+	y++;
+}
+document.getElementById("p2").innerText = display_p2.join('-');
+</script>
+<p>Problem 3: Display_p3 is <span id="p3"></span>
+</p>
+<script>
+	var dices = [[1,1,1,5,5,5],[0,0,4,4,4,4],[3,3,3,3,3,3],[2,2,2,2,6,6]];
+function nonTransitiveFactory(i){
+	return function(){
+		var coefficient1 = Math.floor(Math.random() * 6);
+		return dices[i][coefficient1];
+	}
+}
+function greenDie(){
+	var ff = nonTransitiveFactory(0);
+	return ff();
+}
+var display_p3 = [];
+for (var i = 0; i < 10; i++) {
+	display_p3[i] = greenDie();
+}
+document.getElementById("p3").innerText = display_p3.join('-');
+</script>
+<p>Problem 4: Display_p4 is <span id="p4"></span>
+</p>
+<script>
+	function blueDie(){
+	var ff = nonTransitiveFactory(1);
+	return ff();
+}
+function yellowDie(){
+	var ff = nonTransitiveFactory(2);
+	return ff();
+}
+function orangeDie(){
+	var ff = nonTransitiveFactory(3);
+	return ff();
+}
+function rollNTimes(a,b,n){
+	var count = 0;
+	for (var i = 1; i < n; i++) {
+		if(Number(a()) >= Number(b())){
+			count++;
+	}
+	}
+	return count;
+}
+var display_p4 = [];
+for (var i = 0; i < 10; i++) {
+	display_p4[i] = rollNTimes(greenDie,blueDie,100);
+}
+	document.getElementById("p4").innerText = display_p4.join('-');
+</script>
+<p>Problem 5: This is called non-transitive dice because when we sort the dices in some kind of order, the rate that the former one rolls higher than the latter one is same and more than 50% and the rate that last one rolls higher than the first one is also same. Generally speaking, the first one should have a higher winning rate than the last one because of the transitivity. Since the winning rates have no transitivity, it is called non-transitive dice.
+<table border="1" width="400px" height="200px">
+	<tr id="A">
+		<td id="1">(0,0)</td>
+		<td id="2">(0,1)</td>
+		<td id="3">(0,2)</td>
+		<td id="4">(0,3)</td>
+	</tr>
+	<tr id="B">
+		<td id="5">(1,0)</td>
+		<td id="6">(1,1)</td>
+		<td id="7">(1,2)</td>
+		<td id="8">(1,3)</td>
+	</tr>
+	<tr id="C">
+		<td id="9">(2,0)</td>
+		<td id="10">(2,1)</td>
+		<td id="11">(2,2)</td>
+		<td id="12">(2,3)</td>
+	</tr>
+	<tr id="D">
+		<td id="13">(3,0)</td>
+		<td id="14">(3,1)</td>
+		<td id="15">(3,2)</td>
+		<td id="16">(3,3)</td>
+	</tr>
+</table>
+<script >
+	document.getElementById("1").innerText = rollNTimes(nonTransitiveFactory(0),nonTransitiveFactory(0),1000);
+	document.getElementById("2").innerText = rollNTimes(nonTransitiveFactory(0),nonTransitiveFactory(1),1000);
+	document.getElementById("3").innerText = rollNTimes(nonTransitiveFactory(0),nonTransitiveFactory(2),1000);
+	document.getElementById("4").innerText = rollNTimes(nonTransitiveFactory(0),nonTransitiveFactory(3),1000);
+	document.getElementById("5").innerText = rollNTimes(nonTransitiveFactory(1),nonTransitiveFactory(0),1000);
+	document.getElementById("6").innerText = rollNTimes(nonTransitiveFactory(1),nonTransitiveFactory(1),1000);
+	document.getElementById("7").innerText = rollNTimes(nonTransitiveFactory(1),nonTransitiveFactory(2),1000);
+	document.getElementById("8").innerText = rollNTimes(nonTransitiveFactory(1),nonTransitiveFactory(3),1000);
+	document.getElementById("9").innerText = rollNTimes(nonTransitiveFactory(2),nonTransitiveFactory(0),1000);
+	document.getElementById("10").innerText = rollNTimes(nonTransitiveFactory(2),nonTransitiveFactory(1),1000);
+	document.getElementById("11").innerText = rollNTimes(nonTransitiveFactory(2),nonTransitiveFactory(2),1000);
+	document.getElementById("12").innerText = rollNTimes(nonTransitiveFactory(2),nonTransitiveFactory(3),1000);
+	document.getElementById("13").innerText = rollNTimes(nonTransitiveFactory(3),nonTransitiveFactory(0),1000);
+	document.getElementById("14").innerText = rollNTimes(nonTransitiveFactory(3),nonTransitiveFactory(1),1000);
+	document.getElementById("15").innerText = rollNTimes(nonTransitiveFactory(3),nonTransitiveFactory(2),1000);
+	document.getElementById("16").innerText = rollNTimes(nonTransitiveFactory(3),nonTransitiveFactory(3),1000);
+</script>
+</p>
+</body>
+</html>
