@@ -1,4 +1,4 @@
-var data = [{"rank": 1, "count": 15342397280, "word": "of"},
+[{"rank": 1, "count": 15342397280, "word": "of"},
 {"rank": 2, "count": 7611765281, "word": "in"},
 {"rank": 4, "count": 11021132912, "word": "and"},
 {"rank": 8, "count": 3021925527, "word": "for"},
