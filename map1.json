@@ -1,0 +1,462 @@
+
+        [{ 
+            "abbr": "AK", 
+            "full": "Alaska", 
+            "ap": "Alaska",
+            "x": 00, 
+            "y": 72, 
+            "w": 66, 
+            "h": 66, 
+            "fill": "red"
+        },
+        {
+            "abbr": "AL",
+            "full": "Alabama",
+            "ap": "Ala.",
+            "x": 504,
+            "y": 432,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "AR",
+            "full": "Arkansas",
+            "ap": "Ark.",
+            "x": 360,
+            "y": 360,
+            "w": 66,
+            "h": 66
+        },
+         {
+            "abbr": "AZ",
+            "full": "Arizona",
+            "ap": "Ariz.",
+            "x": 144,
+            "y": 360,
+            "w": 66,
+            "h": 66
+        },
+         {
+            "abbr": "CA",
+            "full": "California",
+            "ap": "Calif.",
+            "x": 72,
+            "y": 288,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "CO",
+            "full": "Colorado",
+            "ap": "Colo.",
+            "x": 216,
+            "y": 288,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "CT",
+            "full": "Connecticut",
+            "ap": "Conn.",
+            "x": 720,
+            "y": 216,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "DC",
+            "full": "Washington, D.C.",
+            "ap": "D.C.",
+            "x": 648,
+            "y": 360,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "DE",
+            "full": "Delaware",
+            "ap": "Del.",
+            "x": 720,
+            "y": 288,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "FL",
+            "full": "Florida",
+            "ap": "Fla.",
+            "x": 648,
+            "y": 504,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "GA",
+            "full": "Georgia",
+            "ap": "Ga.",
+            "x": 576,
+            "y": 432,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "HI",
+            "full": "Hawaii",
+            "ap": "Hawaii",
+            "x": 72,
+            "y": 504,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "IA",
+            "full": "Iowa",
+            "ap": "Iowa",
+            "x": 360,
+            "y": 216,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "ID",
+            "full": "Idaho",
+            "ap": "Idaho",
+            "x": 144,
+            "y": 144,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "IL",
+            "full": "Illinois",
+            "ap": "Ill.",
+            "x": 432,
+            "y": 144,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "IN",
+            "full": "Indiana",
+            "ap": "Ind.",
+            "x": 432,
+            "y": 216,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "KS",
+            "full": "Kansas",
+            "ap": "Kan.",
+            "x": 288,
+            "y": 360,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "KY",
+            "full": "Kentucky",
+            "ap": "Ky.",
+            "x": 432,
+            "y": 288,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "LA",
+            "full": "Louisiana",
+            "ap": "La.",
+            "x": 360,
+            "y": 432,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "MA",
+            "full": "Massachusetts",
+            "ap": "Mass.",
+            "x": 720,
+            "y": 144,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "MD",
+            "full": "Maryland",
+            "ap": "Md.",
+            "x": 648,
+            "y": 288,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "ME",
+            "full": "Maine",
+            "ap": "Maine",
+            "x": 792.8,
+            "y": 0,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "MI",
+            "full": "Michigan",
+            "ap": "Mich",
+            "x": 504,
+            "y": 144,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "MN",
+            "full": "Minnesota",
+            "ap": "Minn.",
+            "x": 360,
+            "y": 144,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "MO",
+            "full": "Missouri",
+            "ap": "Mo.",
+            "x": 360,
+            "y": 288,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "MS",
+            "full": "Mississippi",
+            "ap": "Miss.",
+            "x": 432,
+            "y": 432,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "MT",
+            "full": "Montana",
+            "ap": "Mont.",
+            "x": 216,
+            "y": 144,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "NC",
+            "full": "North Carolina",
+            "ap": "N.C.",
+            "x": 504,
+            "y": 360,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "ND",
+            "full": "North Dakota",
+            "ap": "N.D.",
+            "x": 288,
+            "y": 144,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "NE",
+            "full": "Nebraska",
+            "ap": "Neb.",
+            "x": 288,
+            "y": 288,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "NH",
+            "full": "New Hampshire",
+            "ap": "N.H.",
+            "x": 792.8,
+            "y": 72,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "NJ",
+            "full": "New Jersey",
+            "ap": "N.J.",
+            "x": 648,
+            "y": 216,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "NM",
+            "full": "New Mexico",
+            "ap": "N.M.",
+            "x": 216,
+            "y": 360,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "NV",
+            "full": "Nevada",
+            "ap": "Nev.",
+            "x": 144,
+            "y": 216,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "NY",
+            "full": "New York",
+            "ap": "N.Y.",
+            "x": 648,
+            "y": 144,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "OH",
+            "full": "Ohio",
+            "ap": "Ohio",
+            "x": 504,
+            "y": 216,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "OK",
+            "full": "Oklahoma",
+            "ap": "Okla.",
+            "x": 288,
+            "y": 432,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "OR",
+            "full": "Oregon",
+            "ap": "Ore.",
+            "x": 72,
+            "y": 216,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "PA",
+            "full": "Pennsylvania",
+            "ap": "Pa.",
+            "x": 576,
+            "y": 216,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "RI",
+            "full": "Rhode Island",
+            "ap": "R.I.",
+            "x": 792.8,
+            "y": 216,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "SC",
+            "full": "South Carolina",
+            "ap": "S.C.",
+            "x": 576,
+            "y": 360,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "SD",
+            "full": "South Dakota",
+            "ap": "S.D.",
+            "x": 288,
+            "y": 216,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "TN",
+            "full": "Tennessee",
+            "ap": "Tenn.",
+            "x": 432,
+            "y": 360,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "TX",
+            "full": "Texas",
+            "ap": "Texas",
+            "x": 288,
+            "y": 504,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "UT",
+            "full": "Utah",
+            "ap": "Utah",
+            "x": 144,
+            "y": 288,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "VA",
+            "full": "Virginia",
+            "ap": "Va.",
+            "x": 576,
+            "y": 288,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "VT",
+            "full": "Vermont",
+            "ap": "Vt.",
+            "x": 720,
+            "y": 72,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "WA",
+            "full": "Washington",
+            "ap": "Wash.",
+            "x": 72,
+            "y": 144,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "WI",
+            "full": "Wisconsin",
+            "ap": "Wis.",
+            "x": 432,
+            "y": 72,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "WV",
+            "full": "West Virginia",
+            "ap": "W. Va.",
+            "x": 504,
+            "y": 288,
+            "w": 66,
+            "h": 66
+        },
+        {
+            "abbr": "WY",
+            "full": "Wyoming",
+            "ap": "Wyo.",
+            "x": 216,
+            "y": 216,
+            "w": 66,
+            "h": 66
+        }
+    ]
